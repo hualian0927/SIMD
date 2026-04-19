@@ -50,8 +50,8 @@ struct SearchResult
 
 void build_index(float* base, size_t base_number, size_t vecdim)
 {
-    const int efConstruction = 150; // 为防止索引构建时间过长，efc建议设置200以下
-    const int M = 16; // M建议设置为16以下
+    const int efConstruction = 150; 
+    const int M = 16; 
 
     HierarchicalNSW<float> *appr_alg;
     InnerProductSpace ipspace(vecdim);
@@ -84,7 +84,7 @@ inline float InnerProduct_SIMD(const float* a, const float* b, size_t dim)
 }
 
 
-// 自定义的 SIMD 搜索逻辑（套用你封装好的 InnerProductSIMDNeon）
+// 自定义的 SIMD 搜索逻辑（套用封装好的 InnerProductSIMDNeon）
 inline std::priority_queue<std::pair<float, int>> my_simd_search(
     const float* base, const float* query, size_t base_number, size_t vecdim, size_t k) {
     
