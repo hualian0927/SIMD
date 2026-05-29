@@ -1,0 +1,77 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 25K of event 'cpu-cycles:ppu'
+# Event count (approx.): 127135625627
+#
+# Children      Self  Symbol                                                                                                                                                                                                                                                        IPC   [IPC Coverage]
+# ........  ........  ............................................................................................................................................................................................................................................................  ....................
+#
+    95.58%     0.00%  [.] 0x0000ffff937c9d5b                                                                                                                                                                                                                                        -      -            
+            |          
+             --95.48%--0xffff93762517
+                       |          
+                       |--83.01%--batch_ivf_worker
+                       |          
+                        --12.46%--fine_parallel_worker
+
+    95.48%     0.00%  [.] 0x0000ffff93762517                                                                                                                                                                                                                                        -      -            
+            |          
+            |--83.01%--batch_ivf_worker
+            |          
+             --12.46%--fine_parallel_worker
+
+    83.01%    82.20%  [.] batch_ivf_worker                                                                                                                                                                                                                                          -      -            
+            |          
+             --82.20%--0xffff937c9d5b
+                       0xffff93762517
+                       batch_ivf_worker
+
+    12.46%    12.45%  [.] fine_parallel_worker                                                                                                                                                                                                                                      -      -            
+            |          
+             --12.45%--0xffff937c9d5b
+                       0xffff93762517
+                       fine_parallel_worker
+
+     4.40%     0.05%  [.] main                                                                                                                                                                                                                                                      -      -            
+            |          
+             --4.36%--main
+                       |          
+                        --4.21%--ivf_simd_fine_pthread
+
+     4.40%     0.00%  [.] _start                                                                                                                                                                                                                                                    -      -            
+            |
+            ---__libc_start_main
+               0xffff9370afff
+               main
+               |          
+                --4.21%--ivf_simd_fine_pthread
+
+     4.40%     0.00%  [.] 0x0000ffff9370afff                                                                                                                                                                                                                                        -      -            
+            |
+            ---main
+               |          
+                --4.21%--ivf_simd_fine_pthread
+
+     4.32%     0.00%  [.] __libc_start_main                                                                                                                                                                                                                                         -      -            
+            |
+            ---0xffff9370afff
+               main
+               |          
+                --4.13%--ivf_simd_fine_pthread
+
+     4.22%     3.38%  [.] ivf_simd_fine_pthread                                                                                                                                                                                                                                     -      -            
+            |          
+             --3.38%--_start
+                       __libc_start_main
+                       0xffff9370afff
+                       main
+                       ivf_simd_fine_pthread
+
+
+
+#
+# (Tip: Treat branches as callchains: perf report --branch-history)
+#

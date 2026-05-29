@@ -1,0 +1,24 @@
+# started on Thu May 21 11:13:19 2026
+
+
+ Performance counter stats for './main':
+
+   232,935,235,712      cpu-cycles:u                                                
+    81,816,560,354      instructions:u            #    0.35  insn per cycle         
+    34,907,929,829      cache-references:u                                          
+     1,538,206,529      cache-misses:u            #    4.406 % of all cache refs    
+    34,907,929,829      L1-dcache-loads:u                                           
+     1,538,206,529      L1-dcache-load-misses:u   #    4.41% of all L1-dcache accesses
+     5,197,820,565      LLC-loads:u                                                 
+     2,303,109,261      LLC-load-misses:u         #   44.31% of all LL-cache accesses
+   <not supported>      branch-instructions:u                                       
+       160,560,637      branch-misses:u                                             
+                 0      context-switches:u                                          
+                 0      cpu-migrations:u                                            
+
+      72.393549772 seconds time elapsed
+
+      92.040437000 seconds user
+      84.344174000 seconds sys
+
+
